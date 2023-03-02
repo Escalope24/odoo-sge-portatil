@@ -3,7 +3,7 @@ from odoo import models, fields, api
 class Laptop(models.Model):
     _name = 'laptop.model'
     _description = 'Modelo de portátiles'
-
+    product_id=fields.Many2one('product.template',string='Producto', requiered=True)
     name = fields.Char(string='Nombre', required=True, index=True)
     brand = fields.Char(string='Marca', required=True)
     brand_id = fields.Many2one(comodel_name='brand', string='Marca')
