@@ -12,7 +12,7 @@ class Laptop(models.Model):
     year = fields.Integer(string='Año')
     description = fields.Text(string='Descripción')
     sold = fields.Boolean(string='Vendido', default=False)
-
+    seller_id = fields.Integer(string='ID del vendedor', default=lambda self: self.env['ir.sequence'].next_by_code('portatil.seller.sequence'), help='ID único del vendedor', required=True, readonly=True, copy=False, index=True, unique=True)
     buyer_ids = fields.Many2many(comodel_name='user.model', string='Compradores')
 
     # Nuevos campos
