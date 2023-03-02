@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <menuitem id="main_menu" name="Nombre del Módulo" sequence="10"/>
+    <menuitem id="menu_laptops" name="Portátiles" parent="main_menu" sequence="10" action="action_laptops"/>
+    <menuitem id="menu_vendors" name="Vendedores" parent="main_menu" sequence="20" action="action_vendors"/>
+    <menuitem id="menu_offers" name="Ofertas" parent="main_menu" sequence="30" action="action_offers"/>
+    <menuitem id="menu_about" name="Sobre Nosotros" parent="main_menu" sequence="40" action="action_about"/>
+  </data>
+</odoo>
