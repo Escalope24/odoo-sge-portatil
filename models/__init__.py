@@ -1,1 +1,1 @@
-from . import Brand, Laptop, Seller, User
+from . import Laptop, Seller, User
