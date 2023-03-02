@@ -2,7 +2,6 @@
 <odoo>
   <data>
     <menuitem id="main_menu" name="Nombre del Módulo" sequence="10"/>
-    <menuitem id="menu_laptops" name="laptop" parent="main_menu" sequence="10" action="action_laptops"/>
-    <menuitem id="menu_vendors" name="seller" parent="main_menu" sequence="20" action="action_vendors"/>
+
   </data>
 </odoo>
