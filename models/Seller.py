@@ -12,12 +12,12 @@ class Seller(models.Model):
 
     laptop_ids = fields.One2many(comodel_name='laptop.model', inverse_name='seller_id', string='Portátiles Vendidos')
 
-    @api.multi
+    @api.model
     def toggle_active(self):
         for seller in self:
             seller.is_active = not seller.is_active
 
-    @api.multi
+    @api.model
     def view_laptops(self):
         action = self.env.ref('module_name.action_laptop_list')
         result = action.read()[0]

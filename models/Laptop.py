@@ -23,11 +23,11 @@ class Laptop(models.Model):
     graphics = fields.Char(string='Tarjeta gráfica')
     operating_system = fields.Char(string='Sistema operativo')
 
-    @api.multi
+    @api.model
     def mark_as_sold(self):
         self.sold = True
 
-    @api.multi
+    @api.model
     def add_buyer(self, buyer):
         self.buyer_ids |= buyer
 
