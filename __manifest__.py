@@ -19,9 +19,9 @@
 
     # always loaded
     'data': [
-        'views/user_view.xml',
-        'views/views.xml',
-        'views/seller.xml',
-        'views/laptop.xml'
+        './views/user_view.xml',
+        './views/views.xml',
+        './views/seller.xml',
+        './views/laptop.xml'
     ],
 }
