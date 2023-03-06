@@ -4,7 +4,6 @@
     'summary': """Recu odoo""",
     'description': """Odoo module to buy 2nd hand laptops:""",
     'author': "Noe y Aaron",
-    'website': "https://github.com/SalesianosZaragoza/recuperacion-odoo-jonfeddan",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/master/openerp/addons/base/module/module_data.xml
@@ -19,9 +18,9 @@
 
     # always loaded
     'data': [
-        './views/user_view.xml',
-        './views/views.xml',
-        './views/seller.xml',
-        './views/laptop.xml'
-    ],
+        'views/usuarios.xml',
+        'views/portatiles.xml',
+        'views/ventas.xml',
+        'views/menus.xml'
+    ]
 }

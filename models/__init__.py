@@ -1,1 +1,1 @@
-from . import Laptop, Seller, User
+from . import ventas, portatiles, usuarios
