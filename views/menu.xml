@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
     
-    <menuitem id="prueba_menu_root" name="RecuOdoo"/>
+    <menuitem id="recu_menu_root" name="RecuSGE"/>
 
-        <menuitem id="usuarios_menu_act" name="Usuarios" parent="prueba_menu_root" action="usuarios_action"/>
+        <menuitem id="usuarios_menu_act" name="Usuarios" parent="recu_menu_root" action="usuarios_action"/>
 
-        <menuitem id="portatiles_menu_act" name="Portatiles" parent="prueba_menu_root" action="portatiles_action"/>
+        <menuitem id="portatiles_menu_act" name="Portatiles" parent="recu_menu_root" action="portatiles_action"/>
 
-        <menuitem id="transacciones_menu_act" name="Ventas" parent="prueba_menu_root" action="ventas_action"/>
-
+        <menuitem id="transacciones_menu_act" name="Ventas" parent="recu_menu_root" action="ventas_action"/>
+        
 </odoo>
 

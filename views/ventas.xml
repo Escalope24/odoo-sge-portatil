@@ -1,39 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="portatiles_action" model="ir.actions.act_window">
-        <field name="name">Portatiles</field>
+    <record id="ventas_action" model="ir.actions.act_window">
+        <field name="name">Ventas</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="res_model">portatiles</field>
+        <field name="res_model">ventas</field>
         <field name="view_mode">tree,form</field>
     </record>
 
-    <record id="portatiles_view_form" model="ir.ui.view">
-        <field name="name">Portatiles</field>
-        <field name="model">portatiles</field>
+    <record id="transacciones_view_form" model="ir.ui.view">
+        <field name="name">Ventas</field>
+        <field name="model">ventas</field>
         <field name="arch" type="xml">
-            <form string="">
+            <form string="Ventas">
                 <sheet>
-                    <group>
-                        <field name="nombre" />
-                        <field name="imagen" />
-                        <field name="descripcion" />
+                    <group name="Vendedor">
                         <field name="vendedor" />
+                    </group>
+                    <group name="Comprador">
+                        <field name="comprador" />
+                    </group>
+                    <group name="Portatil">
+                        <field name="portatil" />
+                    </group>
+                    <group name="Compra">
+                        <field name="fecha_venta" />
+                        <field name="precio" />
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
 
-    <record id="portatiles_view_tree" model="ir.ui.view">
-        <field name="name">Portatiles</field>
-        <field name="model">portatiles</field>
+    <record id="transacciones_view_tree" model="ir.ui.view">
+        <field name="name">Ventas</field>
+        <field name="model">ventas</field>
         <field name="arch" type="xml">
-            <tree string="">
+            <tree string="Ventas">
                 <field name="nombre" />
-                <field name="imagen" />
-                <field name="vendedor" />
-                <field name="descripcion" />
             </tree>
         </field>
     </record>

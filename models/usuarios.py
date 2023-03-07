@@ -36,27 +36,3 @@ class Usuarios(models.Model):
                         'message': "El DNI debe tener 9 caracteres",
                     }
                 }
-            try:
-                if self.dni[8].isalpha() == False:
-                    raise ValueError("El último caracter del DNI debe ser una letra")
-            except:
-                return {
-                    'warning': {
-                        'title': "Error",
-                        'message': "El último caracter del DNI debe ser una letra",
-                    }
-                }
-
-    @api.onchange('email')
-    def _onchange_email(self):
-        try:
-            if self.email:
-                if '@' not in self.email:
-                    raise ValueError("El email debe tener un @")
-        except:
-            return {
-                'warning': {
-                    'title': "Error",
-                    'message': "El email debe tener un @",
-                }
-            }

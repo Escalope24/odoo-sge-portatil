@@ -20,9 +20,6 @@
                             <field name="email" />
                             <field name="telefono" />
                         </group>
-                        <group string="Imagen de perfil">
-                            <field name="imagen" string=""/>
-                        </group>
                     </group>
                     <group string="Portatiles">
                         <field name="portatiles" />
