@@ -31,6 +31,19 @@ class Ventas(models.Model):
                 }
             }
 
+    @api.onchange('vendedor', 'comprador')
+    def _onchange_usuarios(self):
+        try:
+            if self.vendedor and self.comprador:
+                if self.vendedor == self.comprador:
+                    raise ValueError("No puede comprarse un portatil a si mismo")
+        except:
+            return {
+                'warning': {
+                    'title': "Error",
+                    'message': "No puede comprarse un portatil a si mismo",
+                }
+            }
 
     @api.onchange('portatil', 'vendedor')
     def _onchange_portatil(self):
@@ -43,5 +56,19 @@ class Ventas(models.Model):
                 'warning': {
                     'title': "Error",
                     'message': "El portatil no pertenece al vendedor",
+                }
+            }
+
+    @api.onchange('precio')
+    def _onchange_precio(self):
+        try:
+            if self.precio:
+                if self.precio <= 0:
+                    raise ValueError("El precio no puede ser negativo o gratuito")
+        except:
+            return {
+                'warning': {
+                    'title': "Error",
+                    'message': "El precio no puede ser negativo o gratuito",
                 }
             }

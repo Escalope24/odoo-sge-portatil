@@ -1,49 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="portatil_action" model="ir.actions.act_window">
-        <field name="name">portatil</field>
+
+    <record id="portatiles_action" model="ir.actions.act_window">
+        <field name="name">Portatiles</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="res_model">portatil</field>
+        <field name="res_model">portatiles</field>
         <field name="view_mode">tree,form</field>
     </record>
 
-    <record id="portatil_view_form" model="ir.ui.view">
-        <field name="name">portatil</field>
-        <field name="model">portatil</field>
+    <record id="portatiles_view_form" model="ir.ui.view">
+        <field name="name">Portatiles</field>
+        <field name="model">portatiles</field>
         <field name="arch" type="xml">
             <form string="">
-                <group>
-                    <field name="modelo" />
-                    <field name="marca" />
-                    <field name="imagen" widget='image'/>
-                    <field name="tamaño" />
-                    <field name="peso" />
-                    <field name="RAM" />
-                    <field name="HDD" />
-                    <field name="SSD" />
-                    <field name="grafica" />
-                    <field name="placa_base" />
-                </group>
+                <sheet>
+                    <group>
+                        <field name="nombre" />
+                        <field name="imagen" />
+                        <field name="descripcion" />
+                        <field name="vendedor" />
+                    </group>
+                </sheet>
             </form>
         </field>
     </record>
 
-    <record id="portatil_view_tree" model="ir.ui.view">
-        <field name="name">portatil</field>
-        <field name="model">portatil</field>
+    <record id="portatiles_view_tree" model="ir.ui.view">
+        <field name="name">Portatiles</field>
+        <field name="model">portatiles</field>
         <field name="arch" type="xml">
             <tree string="">
-                    <field name="modelo" />
-                    <field name="marca" />
-                    <field name="imagen" widget='image'/>
-                    <field name="tamaño" />
-                    <field name="peso" />
-                    <field name="RAM" />
-                    <field name="HDD" />
-                    <field name="SSD" />
-                    <field name="grafica" />
-                    <field name="placa_base" />
+                <field name="nombre" />
+                <field name="imagen" />
+                <field name="vendedor" />
+                <field name="descripcion" />
             </tree>
         </field>
     </record>
+
 </odoo>

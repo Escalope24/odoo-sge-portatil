@@ -22,5 +22,6 @@
         'views/portatiles.xml',
         'views/ventas.xml',
         'views/menu.xml'
+        'views/devoluciones.xml'
     ]
 }

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="devoluciones_action" model="ir.actions.act_window">
+        <field name="name">Devoluciones</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">devoluciones</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="transacciones_view_form" model="ir.ui.view">
+        <field name="name">Devoluciones</field>
+        <field name="model">devoluciones/field>
+        <field name="arch" type="xml">
+            <form string="Devolucion">
+                <sheet>
+                    <group name="Vendedor">
+                        <field name="vendedor" />
+                    </group>
+                    <group name="Comprador">
+                        <field name="comprador" />
+                    </group>
+                    <group name="Portatil">
+                        <field name="portatil" />
+                    </group>
+                    <group name="Compra">
+                        <field name="fecha_compra" />
+                    </group>
+                    <group name="Devolucion">
+                        <field name="fecha_devolucion" />
+                        <field name="motivo" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="transacciones_view_tree" model="ir.ui.view">
+        <field name="name">Devolucion</field>
+        <field name="model">devoluciones</field>
+        <field name="arch" type="xml">
+            <tree string="Devolucion">
+                <field name="nombre" />
+            </tree>
+        </field>
+    </record>
+
+</odoo>

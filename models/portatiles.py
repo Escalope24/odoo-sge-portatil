@@ -1,21 +1,23 @@
 from odoo import models, fields, api
 
-
 class Portatiles(models.Model):
+
+    _name = "portatiles"
+    _rec_name = "nombre"
+    _description = "portatiles"
+
+    nombre = fields.Char(string="Nombre del portatil", required=True)
+    imagen = fields.Image(string="Imagen del producto")
+    descripcion = fields.Text(string="Descripcion del portatil", required=True)
+    vendedor = fields.Many2one('usuarios', required=True)
+    vendido = fields.Boolean(string="Vendido", compute='_vendido')
+    venta = fields.One2many('ventas', 'portatil')
     
-    _name = 'portatil'
-    _rec_name = 'modelo'
-    _description = 'portatil'
-    
-    modelo = fields.Char(string='Modelo', required=True)
-    marca = fields.Many2one('marca', required=True)
-    imagen = fields.Image()
-    resolucion = fields.Char(string='Resolución', required=True)
-    frecuencia = fields.Integer(string='Frecuencia', required=True)
-    tamaño = fields.Char(string='Tamaño', required=True)
-    peso = fields.Float(string='Peso', required=True)
-    RAM = fields.Integer(string='RAM', required=True)
-    HDD = fields.Integer(string='HDD', required=True)
-    SSD = fields.Integer(string='SSD', required=True)
-    grafica = fields.Char(string='Tarjeta gráfica', required=True)
-    placa_base = fields.Char(string='Placa base', required=True)
+    @api.depends('vendedor')
+    def _vendido(self):
+        for record in self:
+            for venta in record.vendedor.ventas:
+                if venta.portatil == self:
+                    record.vendido = True
+                else:
+                    record.vendido = False
