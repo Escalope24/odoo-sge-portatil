@@ -9,7 +9,7 @@ class Devoluciones (models.Model):
     comprador = fields.Many2one('usuarios', required=True)
     vendedor = fields.Many2one('usuarios', required=True)
     portatil = fields.Many2one('portatiles', required=True)
-    fecha_compra = fields.Date(string="Fecha de compra", required=True)
+    fecha_venta = fields.Date(string="Fecha de compra", required=True)
     fecha_devolucion = fields.Date(string="Fecha de devolucion", required=True)
     motivo=fields.Char(string="Motivo")
 

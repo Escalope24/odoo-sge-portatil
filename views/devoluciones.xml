@@ -24,7 +24,7 @@
                         <field name="portatil" />
                     </group>
                     <group name="Compra">
-                        <field name="fecha_compra" />
+                        <field name="fecha_venta" />
                     </group>
                     <group name="Devolucion">
                         <field name="fecha_devolucion" />
